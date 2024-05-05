@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 import axios from "axios";
 import { Link } from "react-router-dom";
-function Course() {
+function Books() {
   const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
@@ -49,4 +49,4 @@ function Course() {
   );
 }
 
-export default Course;
+export default Books;

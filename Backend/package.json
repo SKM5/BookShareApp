@@ -1,5 +1,5 @@
 {
-    "name": "bookstore",
+    "name": "bookShare",
     "version": "1.0.0",
     "description": "mern project",
     "main": "index.js",
@@ -10,14 +10,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/akhil2k-lc/bookStoreApp.git"
+        "url": "git+https://github.com/SKM5/BookShareApp.git"
     },
-    "author": "Akhil",
+    "author": "Sayali",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/akhil2k-lc/bookStoreApp/issues"
+        "url": "https://github.com/SKM5/BookShareApp/issues"
     },
-    "homepage": "https://github.com/akhil2k-lc/bookStoreApp#readme",
+    "homepage": "https://github.com/SKM5/BookShareApp#readme",
     "dependencies": {
         "bcryptjs": "^2.4.3",
         "cors": "^2.8.5",
