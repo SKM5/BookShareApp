@@ -1,0 +1,108 @@
+[  {
+        "id": 1,
+        "name": "The Great Gatsby",
+        "title": "A timeless classic exploring the American Dream, love, and the Jazz Age.",
+        "price": 0,
+        "category": "Fiction",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 2,
+        "name": "Sapiens: A Brief History of Humankind",
+        "title": "A thought-provoking exploration of the history of Homo sapiens, from the emergence of our species to the present day.",
+        "price": 0,
+        "category": "Non-Fiction",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 3,
+        "name": "Good Omens",
+        "title": "A hilarious and irreverent take on the apocalypse, filled with wit and satire.",
+        "price": 0,
+        "category": "Humour",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 4,
+        "name": "Cosmos",
+        "title": "An awe-inspiring journey through space and time, exploring the wonders of the universe and our place within it.",
+        "price": 0,
+        "category": "Education / Science",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 5,
+        "name": "Harry Potter and the Philosopher's Stone",
+        "title": "The first book in the beloved series about a young wizard's adventures at Hogwarts School of Witchcraft and Wizardry.",
+        "price": 0,
+        "category": "Kids",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 6,
+        "name": "To Kill a Mockingbird",
+        "title": "A powerful and timeless novel that addresses racial injustice and moral growth in the American South.",
+        "price": 0,
+        "category": "Novels",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 7,
+        "name": "Interpreter of Maladies",
+        "title": "A collection of beautifully written short stories that explore the immigrant experience, family dynamics, and cultural identity.",
+        "price": 0,
+        "category": "Short Stories",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 8,
+        "name": "The Power of Habit: Why We Do What We Do in Life and Business",
+        "title": "A compelling exploration of the science behind habit formation and how understanding habits can transform our lives.",
+        "price": 0,
+        "category": "Self-help",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 9,
+        "name": "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses",
+        "title": "A groundbreaking book that offers valuable insights into building and scaling startups by applying lean principles.",
+        "price": 0,
+        "category": "Corporate",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+    
+    {
+        "id": 10,
+        "name": "Eat, Pray, Love",
+        "title": "A memoir about one woman's journey of self-discovery through travel, food, and spiritual exploration.",
+        "price": 0,
+        "category": "Travel & Food",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+
+    {
+        "id": 11,
+        "name": "The Girl with the Dragon Tattoo",
+        "title": "A gripping and intricately plotted thriller featuring journalist Mikael Blomkvist and hacker Lisbeth Salander as they unravel a decades-old mystery.",
+        "price": 0,
+        "category": "Crime & Thriller",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    },
+    
+    {
+        "id": 12,
+        "name": "The Audacity of Hope: Thoughts on Reclaiming the American Dream",
+        "title": "A compelling exploration of politics, race, and democracy by the former President of the United States, offering hope and optimism for the future.",
+        "price": 0,
+        "category": "Politics",
+        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+    }
+]

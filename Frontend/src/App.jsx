@@ -13,12 +13,8 @@ function App() {
     <>
       <div className="dark:bg-slate-900 dark:text-white">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/BookList"
-            element={authUser ? <BookList /> : <Navigate to="/signup" />}
-          />
-          <Route path="/signup" element={<Signup />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/BookList" element={<BookList />} />
         </Routes>
         <Toaster />
       </div>
