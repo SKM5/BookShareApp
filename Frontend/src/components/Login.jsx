@@ -50,9 +50,26 @@ function Login() {
               ✕
             </Link>
 
-            <h3 className="font-bold text-lg">Login</h3>
+            <h3 className="font-bold text-lg text-black">Login</h3>
+            {/* Username */}
+            <div className="mt-4 space-y-2 text-black">
+              <span>User Name</span>
+              <br />
+              <input
+                type="userName"
+                placeholder="Enter User Name"
+                className="w-80 px-3 py-1 border rounded-md outline-none"
+                {...register("userName", { required: true })}
+              />
+              <br />
+              {errors.userName && (
+                <span className="text-sm text-red-500 text-black">
+                  This field is required
+                </span>
+              )}
+            </div>
             {/* Email */}
-            <div className="mt-4 space-y-2">
+            <div className="mt-4 space-y-2 text-black">
               <span>Email</span>
               <br />
               <input
@@ -63,13 +80,13 @@ function Login() {
               />
               <br />
               {errors.email && (
-                <span className="text-sm text-red-500">
+                <span className="text-sm text-red-500 text-black">
                   This field is required
                 </span>
               )}
             </div>
             {/* password */}
-            <div className="mt-4 space-y-2">
+            <div className="mt-4 space-y-2 text-black">
               <span>Password</span>
               <br />
               <input
@@ -85,7 +102,25 @@ function Login() {
                 </span>
               )}
             </div>
-
+            {/* Role */}
+            <div className="mt-4 space-y-2 text-black">
+              <label htmlFor="role">Role</label> {/* Add label for accessibility */}
+              <br />
+              <select
+                id="role"
+                className="w-80 px-3 py-1 border rounded-md outline-none"
+                {...register("role", { required: true })}
+              >
+                <option value="">Select Role</option>
+                <option value="reader">Reader</option>
+                <option value="book_owner_share">Book Owner (want to share books) </option>
+                <option value="book_owner_reader">Book Owner and Reader</option>
+              </select>
+              <br />
+              {errors.role && (
+                <span className="text-sm text-red-500">Please select a role</span>
+              )}
+            </div> 
             {/* Button */}
             <div className="flex justify-around mt-6">
               <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">

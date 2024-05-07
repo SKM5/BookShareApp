@@ -97,7 +97,7 @@ function Navbar() {
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">{navItems}</ul>
             </div>
-            <div className="hidden md:block">
+            {/*<div className="hidden md:block">
               <label className=" px-3 py-2 border rounded-md flex items-center gap-2">
                 <input
                   type="text"
@@ -117,7 +117,7 @@ function Navbar() {
                   />
                 </svg>
               </label>
-            </div>
+            </div>*/}
             <label className="swap swap-rotate">
               {/* this hidden checkbox controls the state */}
               <input
@@ -168,5 +168,7 @@ function Navbar() {
     </>
   );
 }
+
+
 
 export default Navbar;

@@ -19,6 +19,7 @@ function Signup() {
       fullname: data.fullname,
       email: data.email,
       password: data.password,
+      role: data.role,
     };
     await axios
       .post("http://localhost:4001/user/signup", userInfo)
@@ -102,6 +103,25 @@ function Signup() {
                   </span>
                 )}
               </div>
+              {/* Role */}
+              <div className="mt-4 space-y-2 text-black">
+                <label htmlFor="role">Role</label> {/* Add label for accessibility */}
+                  <br />
+                  <select
+                    id="role"
+                    className="w-80 px-3 py-1 border rounded-md outline-none"
+                    {...register("role", { required: true })}
+                  >
+                    <option value="">Select Role</option>
+                    <option value="reader">Reader</option>
+                    <option value="book_owner_share">Book Owner (want to share books) </option>
+                    <option value="book_owner_reader">Book Owner and Reader</option>
+                  </select>
+                  <br />
+                  {errors.role && (
+                    <span className="text-sm text-red-500">Please select a role</span>
+                  )}
+              </div> 
               {/* Button */}
               <div className="flex justify-around mt-4">
                 <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">

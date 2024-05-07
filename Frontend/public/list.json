@@ -4,7 +4,7 @@
         "title": "A timeless classic exploring the American Dream, love, and the Jazz Age.",
         "price": 0,
         "category": "Fiction",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/51tyC7s8F+L._SX342_SY445_.jpg"
     },
 
     {
@@ -13,7 +13,7 @@
         "title": "A thought-provoking exploration of the history of Homo sapiens, from the emergence of our species to the present day.",
         "price": 0,
         "category": "Non-Fiction",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/41yu2qXhXXL._SY445_SX342_.jpg"
     },
 
     {
@@ -22,7 +22,7 @@
         "title": "A hilarious and irreverent take on the apocalypse, filled with wit and satire.",
         "price": 0,
         "category": "Humour",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/51VbFVmVxtL._SX342_SY445_.jpg"
     },
 
     {
@@ -31,7 +31,7 @@
         "title": "An awe-inspiring journey through space and time, exploring the wonders of the universe and our place within it.",
         "price": 0,
         "category": "Education / Science",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/31tswEHCsSL._SY445_SX342_.jpg"
     },
 
     {
@@ -40,7 +40,7 @@
         "title": "The first book in the beloved series about a young wizard's adventures at Hogwarts School of Witchcraft and Wizardry.",
         "price": 0,
         "category": "Kids",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/51dOacmuzvL._SY445_SX342_.jpg"
     },
 
     {
@@ -49,7 +49,7 @@
         "title": "A powerful and timeless novel that addresses racial injustice and moral growth in the American South.",
         "price": 0,
         "category": "Novels",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/51Z9p5AecCL._SY445_SX342_.jpg"
     },
 
     {
@@ -58,7 +58,7 @@
         "title": "A collection of beautifully written short stories that explore the immigrant experience, family dynamics, and cultural identity.",
         "price": 0,
         "category": "Short Stories",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/51pMLaxVm7L._SY445_SX342_.jpg"
     },
 
     {
@@ -67,7 +67,7 @@
         "title": "A compelling exploration of the science behind habit formation and how understanding habits can transform our lives.",
         "price": 0,
         "category": "Self-help",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/41K-XzBJz2L._SY445_SX342_.jpg"
     },
 
     {
@@ -76,7 +76,7 @@
         "title": "A groundbreaking book that offers valuable insights into building and scaling startups by applying lean principles.",
         "price": 0,
         "category": "Corporate",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/61BFOf9Ap-L._SL1200_.jpg"
     },
     
     {
@@ -85,7 +85,7 @@
         "title": "A memoir about one woman's journey of self-discovery through travel, food, and spiritual exploration.",
         "price": 0,
         "category": "Travel & Food",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/51TkrSqidAL._SY445_SX342_.jpg"
     },
 
     {
@@ -94,7 +94,7 @@
         "title": "A gripping and intricately plotted thriller featuring journalist Mikael Blomkvist and hacker Lisbeth Salander as they unravel a decades-old mystery.",
         "price": 0,
         "category": "Crime & Thriller",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/81YW99XIpJL._SL1500_.jpg"
     },
     
     {
@@ -103,6 +103,52 @@
         "title": "A compelling exploration of politics, race, and democracy by the former President of the United States, offering hope and optimism for the future.",
         "price": 0,
         "category": "Politics",
-        "image": "https://www.freepik.com/free-vector/books-stack-realistic_1537673.htm#fromView=search&page=1&position=0&uuid=dd93b5c0-387d-4358-b355-2050435d9967"
+        "image": "https://m.media-amazon.com/images/I/71vaGZkoCeL._SL1500_.jpg"
+    },
+
+    {
+        "id": 13,
+        "name": "Diary of a Wimpy Kid",
+        "title": "Follow the hilarious misadventures of middle schooler Greg Heffley as he navigates the ups and downs of adolescence through his illustrated diary entries.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://m.media-amazon.com/images/I/81h0s7NqItL._SL1500_.jpg"
+    },
+
+    {
+        "id": 14,
+        "name": "Harry Potter and the Sorcerer's Stone",
+        "title": "Join Harry Potter as he discovers his magical heritage and attends Hogwarts School of Witchcraft and Wizardry in this enchanting tale of friendship, bravery, and adventure.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg"
+    },
+
+    {
+        "id": 15,
+        "name": "Percy Jackson and the Lightning Thief",
+        "title": "Embark on an epic journey with Percy Jackson, a modern-day demigod and son of Poseidon, as he battles mythological monsters and unravels the mysteries of his heritage.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://m.media-amazon.com/images/I/81CjMvMA0gL._SL1500_.jpg"
+    },
+
+    {
+        "id": 16,
+        "name": "Wonder",
+        "title": "Explore the heartwarming story of Auggie Pullman, a boy with facial differences, as he navigates the challenges of fitting in at a new school and teaches others about acceptance and kindness.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://m.media-amazon.com/images/I/7195o6gMA9L._SL1500_.jpg"
+    },
+
+    {
+        "id": 17,
+        "name": "The One and Only Ivan",
+        "title": "Follow the extraordinary journey of Ivan, a silverback gorilla living in captivity, as he discovers the power of friendship, art, and hope in this touching tale inspired by true events.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://m.media-amazon.com/images/I/712MggYvU8L._SL1500_.jpg"
     }
+
 ]
