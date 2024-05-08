@@ -31,7 +31,7 @@ export const signup = async(req, res) => {
 };
 export const login = async(req, res) => {
     try {
-        const { userame, email, password,role } = req.body;
+        const { userName, email, password, role } = req.body;
         const user = await User.findOne({ email });
         const isMatch = await bcryptjs.compare(password, user.password);
         if (!user || !isMatch) {
@@ -41,7 +41,7 @@ export const login = async(req, res) => {
                 message: "Login successful",
                 user: {
                     _id: user._id,
-                    fullname: user.fullname,
+                    userName: user.userName,
                     email: user.email,
                     role: user.role,
                 },

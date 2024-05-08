@@ -50,6 +50,9 @@ function Navbar() {
       <li>
         <a>About</a>
       </li>
+      <li>
+        <a>Cart</a>
+      </li>
     </>
   );
   return (

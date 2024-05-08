@@ -114,7 +114,7 @@ function Signup() {
                   >
                     <option value="">Select Role</option>
                     <option value="reader">Reader</option>
-                    <option value="book_owner_share">Book Owner (want to share books) </option>
+                    <option value="book_owner_share">Book Owner to share book</option>
                     <option value="book_owner_reader">Book Owner and Reader</option>
                   </select>
                   <br />

@@ -12,8 +12,10 @@ function Login() {
 
   const onSubmit = async (data) => {
     const userInfo = {
+      userName: data.userName,
       email: data.email,
       password: data.password,
+      role: data.role,
     };
     await axios
       .post("http://localhost:4001/user/login", userInfo)
@@ -46,6 +48,7 @@ function Login() {
               to="/"
               className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
               onClick={() => document.getElementById("my_modal_3").close()}
+              style={{ borderRadius: "unset" }}
             >
               ✕
             </Link>
@@ -113,7 +116,7 @@ function Login() {
               >
                 <option value="">Select Role</option>
                 <option value="reader">Reader</option>
-                <option value="book_owner_share">Book Owner (want to share books) </option>
+                <option value="book_owner_share">Book Owner to share books </option>
                 <option value="book_owner_reader">Book Owner and Reader</option>
               </select>
               <br />
