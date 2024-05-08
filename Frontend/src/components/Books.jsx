@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-function Books() {
+function Books({ onAddToCart }) {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -17,6 +17,11 @@ function Books() {
     getBooks();
   }, []);
 
+  // Function to handle adding a book to the cart
+  const handleAddToCart = (book) => {
+    onAddToCart(book);
+  };
+  
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
@@ -33,18 +38,21 @@ function Books() {
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
           {books.map((book) => (
-            <div className="book-body">
+            <div className="book-body" key={book.id}>
               <h2 className="book-title">
                 <img src={book.image} alt={book.name} />                
                 <div className="badge badge-secondary">{book.category}</div>
               </h2>
-            <p>{book.name}</p>
-            <div className="card-actions justify-between">
+              <p>{book.name}</p>
+              <div className="card-actions justify-between">
                 <div className="badge badge-outline">${book.price}</div>
-                  <div className=" cursor-pointer px-2 py-1 rounded-full border-[2px] hover:bg-pink-500 hover:text-white duration-200">
-                    Add to Cart
-                  </div>
+                <div 
+                  className="cursor-pointer px-2 py-1 rounded-full border-[2px] hover:bg-pink-500 hover:text-white duration-200"
+                  onClick={() => handleAddToCart(book)} // Call handleAddToCart function on click
+                >
+                  Add to Cart
                 </div>
+              </div>
             </div>
           ))}
         </div>
@@ -54,4 +62,3 @@ function Books() {
 }
 
 export default Books;
-

@@ -1,22 +1,34 @@
-import React from "react";
+// App.jsx
+
+import React, { useState } from 'react';
 import Home from "./home/Home";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import BookList from "./components/BookLists";
 import Signup from "./components/Signup";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
+import Navbar from "./components/Navbar";
+import CartPage from "./components/CartPage"; // Import CartPage component
 
 function App() {
-  const [authUser, setAuthUser] = useAuth();  
+  const [authUser, setAuthUser] = useAuth();
+  const [cartItemsCount, setCartItemsCount] = useState(0);
+  const [booksInCart, setBooksInCart] = useState([]);   
   console.log(authUser);
+  
   return (
     <>      
       <div className="dark:bg-slate-900 dark:text-white">      
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/BookList" element={<BookList />} />
-            <Route path="/signup" element={<Signup />} />
-        </Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/BookList"
+            element={<BookList setBooksInCart={setBooksInCart} setCartItemsCount={setCartItemsCount} />}           
+          />
+          <Route path="/signup" element={<Signup />} />
+          {/* Define route for CartPage */}
+          <Route path="/cart" element={<CartPage booksInCart={booksInCart} />} />                      
+        </Routes>       
         <Toaster />
       </div>
     </>
