@@ -1,0 +1,36 @@
+.login-button  button{
+    width: 100%;
+    padding: auto;
+    margin-top: 20px;
+    background-color: bg-pink-500;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ffffff;
+}
+.login-button p{
+    text-align: left;
+    margin-top: 20px;
+    color: #111;
+    font-size: 18px;
+}
+.signup-button button{
+    width: 100%;
+    padding: auto;
+    margin-top: 20px;
+ 
+ 
+ 
+    color: #111;
+    font-size: 18px;
+    cursor: pointer;
+    color: #5908d2;
+}
+.signup-button p{
+    text-align: left;
+    margin-top: 20px;
+    color: #111;
+    font-size: 18px;
+}

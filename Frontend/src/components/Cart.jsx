@@ -127,7 +127,7 @@ const Cart = () => {
                   .then((res) => {
                     console.log(res.data);
                     if (res.data) {
-                      toast.success("Orser placed Successfully");
+                      toast.success("Order placed Successfully");
                       removeAllItemsfromCart();
                     }
                   })

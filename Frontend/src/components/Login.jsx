@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
+import './login.css';
 function Login() {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-
+ 
   const onSubmit = async (data) => {
     const userInfo = {
       userName: data.userName,
@@ -52,7 +53,7 @@ function Login() {
             >
               ✕
             </Link>
-
+ 
             <h3 className="font-bold text-lg text-black">Login</h3>
             {/* Username */}
             <div className="mt-4 space-y-2 text-black">
@@ -123,9 +124,9 @@ function Login() {
               {errors.role && (
                 <span className="text-sm text-red-500">Please select a role</span>
               )}
-            </div> 
+            </div>
             {/* Button */}
-            <div className="flex justify-around mt-6">
+            <div className="login-button">
               <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
                 Login
               </button>
@@ -145,5 +146,5 @@ function Login() {
     </div>
   );
 }
-
+ 
 export default Login;

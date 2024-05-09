@@ -123,14 +123,14 @@ function Signup() {
                   )}
               </div> 
               {/* Button */}
-              <div className="flex justify-around mt-4">
+              <div className="signup-button">
                 <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
                   Signup
                 </button>
-                <p className="text-xl">
+                <p>
                   Have account?{" "}
                   <button
-                    className="underline text-blue-500 cursor-pointer"
+                   
                     onClick={() =>
                       document.getElementById("my_modal_3").showModal()
                     }

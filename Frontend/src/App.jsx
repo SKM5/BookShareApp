@@ -10,6 +10,7 @@ import { useAuth } from "./context/AuthProvider";
 import Navbar from "./components/Navbar";
 import CartPage from "./components/CartPage"; // Import CartPage component
 import Cart from "./components/Cart"; // Import Cart component
+import Login from './components/Login';
 
 function App() {
   const [authUser, setAuthUser] = useAuth();
@@ -27,6 +28,7 @@ function App() {
             element={<BookList setBooksInCart={setBooksInCart} setCartItemsCount={setCartItemsCount} />}           
           />
           <Route path="/signup" element={<Signup />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           {/* Define route for CartPage */}
           <Route path="/cart" element={<Cart/>} />                      
         </Routes>       
