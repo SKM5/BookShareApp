@@ -75,3 +75,29 @@ export const removeItem = async(req, res) => {
         res.status(500).json({ message: "Internal server error" });
     }
 };
+
+export const removeCart = async(req, res) => {
+    try {
+        console.log("Remove Cart called");
+        const { userid } = req.body;
+        await Cart.deleteMany({ userid });
+        const cart = await Cart.find({ userid });
+        if (cart === null) {
+            return res.status(400).json({ message: "Cart is empty" });
+        } else {
+            res.status(200).json({
+                message: "Cart fetched successfully",
+                carts: cart.map(item => ({
+                    userid: item.userid,
+                    booktitle: item.booktitle,
+                    bookimage: item.bookimage,
+                    price: item.price,
+                    status: item.status,
+                  })),
+            });
+        }
+    } catch (error) {
+        console.log("Error: " + error.message);
+        res.status(500).json({ message: "Internal server error" });
+    }
+};

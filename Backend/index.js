@@ -6,6 +6,7 @@ import cors from "cors";
 import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
 import cartRoute from "./route/cart.route.js";
+import orderRoute from "./route/order.route.js";
 
 const app = express();
 
@@ -32,6 +33,7 @@ try {
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 app.use("/cart", cartRoute);
+app.use("/order", orderRoute);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);

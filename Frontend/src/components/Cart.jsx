@@ -6,6 +6,7 @@ import axios from "axios";
 import Footer from './Footer';
 import Navbar from './Navbar';
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const Cart = () => {
     const navigate = useNavigate();
@@ -111,23 +112,23 @@ const Cart = () => {
               } = useForm();
             
               const onSubmit = async (data) => {
-                const userInfo = {
-                  userName: data.userName,
-                  email: data.email,
-                  password: data.password,
-                  role: data.role,
+                const oderInfo = {
+                    userid: authUser._id,
+                    name: data.name,
+                    address: data.address,
+                    pincode: data.pincode,
+                    mobile: data.mobile,
+                    email: data.email,
+                    totalamount: cartTotal,
+                    cart: cart,
                 };
                 await axios
-                  .post("http://localhost:4001/user/login", userInfo)
+                  .post("http://localhost:4001/order/createorder", oderInfo)
                   .then((res) => {
                     console.log(res.data);
                     if (res.data) {
-                      toast.success("Loggedin Successfully");
-                      document.getElementById("my_modal_3").close();
-                      setTimeout(() => {
-                        window.location.reload();
-                        localStorage.setItem("Users", JSON.stringify(res.data.user));
-                      }, 1000);
+                      toast.success("Orser placed Successfully");
+                      removeAllItemsfromCart();
                     }
                   })
                   .catch((err) => {
@@ -138,6 +139,31 @@ const Cart = () => {
                     }
                   });
               };
+                const removeAllItemsfromCart = async () => {
+                    console.log('removeAllItemsfromCart called');
+                    const removeAllItemsfromCartReq = {
+                      userid: authUser._id,
+                    };
+                    try {
+                      await axios
+                      .post("http://localhost:4001/cart/removeCart", removeAllItemsfromCartReq)
+                .then((res) => {
+                    console.log(res.data);
+                    if (res.data) {
+                        setCart([]);
+                        setCartCount(0);
+                        localStorage.setItem("cartCount", 0);
+                        setCartTotal(0);
+                    }
+                    }
+                    )
+                    }
+                    catch (err) {
+                        if (err.response) {
+                            console.log(err);
+                        }
+                        }
+                    }
   return (
     <div className="cart" >
         <Navbar cartCount={cartCount}/>
@@ -169,10 +195,8 @@ const Cart = () => {
         <button className="btn" onClick={enableCheckout}>Checkout</button>
         <button className="btn" onClick={redirectToAnotherPage}>Continue Shopping</button>
     </div>
-    </>
-    ) : (
-        <p>Your cart is empty</p>
-    )}
+    
+    
     {checkoutClicked && (
     <form className="book-form" onSubmit={handleSubmit(onSubmit)}>
       <label>
@@ -198,6 +222,10 @@ const Cart = () => {
       <button type="submit">Submit</button>
     </form>
     )}
+    </>
+) : (
+    <p>Your cart is empty</p>
+)}
     <Footer />
     </div>
   )
