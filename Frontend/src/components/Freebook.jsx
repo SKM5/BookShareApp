@@ -7,7 +7,9 @@ import Slider from "react-slick";
 import axios from "axios";
 
 import Cards from "./Cards";
-function Freebook() {
+function Freebook(
+  { onAddToCart }
+) {
   const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {

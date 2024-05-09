@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthProvider";
+import toast from "react-hot-toast";
 
 function Books({ onAddToCart }) {
   const [books, setBooks] = useState([]);
+  const [authUser, setAuthUser] = useAuth();
 
   useEffect(() => {
     const getBooks = async () => {
@@ -20,8 +23,33 @@ function Books({ onAddToCart }) {
   // Function to handle adding a book to the cart
   const handleAddToCart = (book) => {
     onAddToCart(book);
+    addBookToCart(book); // Call addBookToCart function
   };
   
+  const addBookToCart = async (data) => {
+    const cartInfo = {
+      userid: authUser._id,
+      booktitle: data.name,
+      bookimage: data.image,
+      price: data.price,
+      status: "Added To Cart",
+    };
+    await axios
+      .post("http://localhost:4001/cart/addbook", cartInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Book Added to Cart successfully");
+        }
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err);
+          toast.error("Error: " + err.response.data.message);
+        }
+      });
+  };
+
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
