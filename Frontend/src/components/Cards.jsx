@@ -7,6 +7,10 @@ import toast from "react-hot-toast";
 function Cards({ item }) {
   const [cartCount, setCartCount] = useState(0);  
   const handleAddToCart = (book) => {
+    if (!authUser) {
+      toast.error("Please login to add book to cart");
+      return;
+    }
     //onAddToCart(book);
     addBookToCart(book); // Call addBookToCart function
     setCartCount(prevCount => prevCount + 1);

@@ -22,6 +22,10 @@ function Books({ onAddToCart }) {
 
   // Function to handle adding a book to the cart
   const handleAddToCart = (book) => {
+    if (!authUser) {
+      toast.error("Please login to add book to cart");
+      return;
+    }
     onAddToCart(book);
     addBookToCart(book); // Call addBookToCart function
   };
