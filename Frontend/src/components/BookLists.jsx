@@ -1,5 +1,5 @@
 // BookList.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Books from "./Books";
 import Footer from "./Footer";
@@ -7,6 +7,15 @@ import CartPage from "./CartPage";
 
 function BookList({ setBooksInCart }) {
   const [cartCount, setCartCount] = useState(0);  
+
+  useEffect(() => {
+    console.log('useEffect called');
+    const cartCount = localStorage.getItem("cartCount");
+    console.log(cartCount);
+    if (cartCount) {
+      setCartCount(parseInt(cartCount));
+    }
+  }, []);
 
   const handleAddToCart = (book) => {
     setCartCount(prevCount => prevCount + 1);

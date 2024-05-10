@@ -4,12 +4,22 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Login from "./Login";
 import Logout from "./Logout";
 import { useAuth } from "../context/AuthProvider";
+import Cart from "./Cart";
 
-function Navbar({ cartCount }) {
+function Navbar ({cartCount}) {
   const [authUser, setAuthUser] = useAuth();
   const navigate = useNavigate(); // Access to navigation
   const location = useLocation(); // Access current location
+ 
 
+  useEffect(() => {
+      console.log('useEffect called for cartCount');
+      const cartCount1 = localStorage.getItem("cartCount");
+      console.log(cartCount1);
+      if (cartCount1) {
+        cartCount = parseInt(cartCount1);
+      }
+  }, []);
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
@@ -155,7 +165,7 @@ function Navbar({ cartCount }) {
       </div>
 
       {/* Render CartPage based on the current route */}
-      {location.pathname === "/cart" && <CartPage booksInCart={booksInCart} />}
+      {/* {location.pathname === "/cart" && <Cart />} */}
     </>
   );
 }

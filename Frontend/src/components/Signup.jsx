@@ -42,12 +42,13 @@ function Signup() {
     <>
       <div className="flex h-screen items-center justify-center">
         <div className=" w-[600px] ">
-          <div className="modal-box">
+          <div className="modal-box" >
             <form onSubmit={handleSubmit(onSubmit)} method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <Link
                 to="/"
                 className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                style={{ borderRadius: "unset" }}
               >
                 ✕
               </Link>
@@ -105,41 +106,41 @@ function Signup() {
               </div>
               {/* Role */}
               <div className="mt-4 space-y-2 text-black">
-                <label htmlFor="role">Role</label> {/* Add label for accessibility */}
-                  <br />
-                  <select
-                    id="role"
-                    className="w-80 px-3 py-1 border rounded-md outline-none"
-                    {...register("role", { required: true })}
-                  >
-                    <option value="">Select Role</option>
-                    <option value="reader">Reader</option>
-                    <option value="book_owner_share">Book Owner to share book</option>
-                    <option value="book_owner_reader">Book Owner and Reader</option>
-                  </select>
-                  <br />
-                  {errors.role && (
-                    <span className="text-sm text-red-500">Please select a role</span>
-                  )}
-              </div> 
+                <span>Role</span>
+                <br />
+                <select
+                  id="role"
+                  className="w-80 px-3 py-1 border rounded-md outline-none"
+                  {...register("role", { required: true })}
+                >
+                  <option value="">Select Role</option>
+                  <option value="reader">Reader</option>
+                  <option value="book_owner_share">Book Owner to share book</option>
+                  <option value="book_owner_reader">Book Owner and Reader</option>
+                </select>
+                <br />
+                {errors.role && (
+                  <span className="text-sm text-red-500">Please select a role</span>
+                )}
+              </div>
               {/* Button */}
-              <div className="flex justify-around mt-4">
-                <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
+              <div className="flex justify-around mt-4" style={{ gap: '20px', fontSize: 'inherit' }}>
+                <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-500 duration-200" style={{ padding: '4px 20px', height: '40px' }}>
                   Signup
                 </button>
-                <p className="text-xl">
+                <p className="text-xl" style={{ fontSize: 'inherit' }}>
                   Have account?{" "}
                   <button
+                    style={{ fontSize: 'inherit', border: 'none', background: 'none', outline: 'none' }}
                     className="underline text-blue-500 cursor-pointer"
-                    onClick={() =>
-                      document.getElementById("my_modal_3").showModal()
-                    }
+                    onClick={() => document.getElementById("my_modal_3").showModal()}
                   >
                     Login
                   </button>{" "}
                   <Login />
                 </p>
               </div>
+
             </form>
           </div>
         </div>

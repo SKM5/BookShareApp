@@ -48,7 +48,7 @@ function Login() {
               to="/"
               className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
               onClick={() => document.getElementById("my_modal_3").close()}
-              style={{ borderRadius: "unset" }}
+              style={{ fontSize: 'inherit', borderRadius: "unset" }}
             >
               ✕
             </Link>
@@ -107,7 +107,7 @@ function Login() {
             </div>
             {/* Role */}
             <div className="mt-4 space-y-2 text-black">
-              <label htmlFor="role">Role</label> {/* Add label for accessibility */}
+            <span>Role</span> {/* Add label for accessibility */}
               <br />
               <select
                 id="role"
@@ -125,8 +125,8 @@ function Login() {
               )}
             </div> 
             {/* Button */}
-            <div className="flex justify-around mt-6">
-              <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
+            <div className="flex justify-around mt-6"  style={{ gap: '20px', fontSize: 'inherit' }}>
+              <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200" style={{ padding: '4px 20px', height: '40px' }}>
                 Login
               </button>
               <p>
@@ -134,6 +134,7 @@ function Login() {
                 <Link
                   to="/signup"
                   className="underline text-blue-500 cursor-pointer"
+                  style= {{ fontSize: 'inherit' }}
                 >
                   Signup
                 </Link>{" "}
