@@ -12,6 +12,8 @@ import Navbar from "./components/Navbar";
 import CartPage from "./components/CartPage"; // Import CartPage component
 import Cart from "./components/Cart"; // Import Cart component
 import PaymentGateway from "./components/PaymentGateway";
+import ContactDetails from "./components/ContactDetails";
+import About from "./components/About";
 
 function App() {
   const [authUser, setAuthUser] = useAuth();
@@ -31,7 +33,9 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           {/* Define route for CartPage */}
-          <Route path="/cart" element={<Cart/>} />                      
+          <Route path="/cart" element={<Cart/>} /> 
+          <Route path="/ContactDetails" element={<ContactDetails/>} />
+          <Route path="/About" element={<About/>} />                       
         </Routes>       
         <Toaster />
       </div>

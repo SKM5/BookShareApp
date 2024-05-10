@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import banner from "../../public/Banner.png";
 import BookSearch from "./BookSearch"; // Import the BookSearch component
 
@@ -16,7 +17,7 @@ function Banner() {
            {/* Include the BookSearch component here */}
            <BookSearch setBook={setBook} />
           </div>
-          <button className="btn mt-6 btn-secondary">Explore</button>
+          <Link to="/BookList" className="btn mt-6 btn-secondary">Explore</Link>
         </div>
         <div className=" order-1 w-full mt-20 md:w-1/2">
           <img

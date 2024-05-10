@@ -5,6 +5,8 @@ import Login from "./Login";
 import Logout from "./Logout";
 import { useAuth } from "../context/AuthProvider";
 import Cart from "./Cart";
+import ContactDetails from "./ContactDetails";
+import About from "./About";
 
 function Navbar ({cartCount}) {
   const [authUser, setAuthUser] = useAuth();
@@ -63,10 +65,10 @@ function Navbar ({cartCount}) {
         <a href="/cart">Cart ({cartCount})</a>
       </li>
       <li>
-        <a>Contact</a>
+        <a href="/ContactDetails">Contact</a>
       </li>
       <li>
-        <a>About</a>
+        <a href="/About">About</a>
       </li>
     </>
   );
