@@ -36,6 +36,14 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
+  const [paymentSuccessful, setPaymentSuccessful] = useState(false);
+
+  const handlePaymentSuccess = () => {
+    setPaymentSuccessful(true);
+    console.log('Payment successful');
+    
+  };
+
   useEffect(() => {
     console.log('useEffect called');
     const fetchUserCart = async () => {
@@ -130,7 +138,7 @@ const Cart = () => {
       .then((res) => {
         console.log(res.data);
         if (res.data) {
-          toast.success("Order placed Successfully");          
+          toast.success("Order placed Successfully");
           setShowPaymentGateway(true);
           //removeAllItemsfromCart();
         }
@@ -237,10 +245,17 @@ const Cart = () => {
               <button type="submit">Submit</button>
             </form>
           )}
-          {checkoutClicked && showPaymentGateway && <PaymentGateway removeAllItemsfromCart={removeAllItemsfromCart}/>}        
+          {checkoutClicked && !paymentSuccessful && (
+            <PaymentGateway removeAllItemsfromCart={removeAllItemsfromCart} onPaymentSuccess={handlePaymentSuccess} />
+          )}
+
+          {paymentSuccessful && <p>Payment successful!</p>}
         </>
       ) : (
-        <p>Your cart is empty</p>
+        <div>
+          {paymentSuccessful && <p>Payment successful!</p>}
+          <p>Your cart is empty</p>
+        </div>        
       )}
       <Footer />
     </div>

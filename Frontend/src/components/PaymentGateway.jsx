@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PaymentGateway = ({ removeAllItemsfromCart }) => {
+const PaymentGateway = ({ removeAllItemsfromCart , onPaymentSuccess}) => {
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
@@ -11,8 +11,22 @@ const PaymentGateway = ({ removeAllItemsfromCart }) => {
     e.preventDefault();
     setSubmitted(true);
     // Perform payment processing logic here
-    // After successful payment processing, call removeAllItemsfromCart
-    removeAllItemsfromCart();
+    // After successful payment processing
+    onPaymentSuccess();
+   // Wrap removeAllItemsfromCart in a Promise and await it
+    handleCartRemoval();
+  };
+
+  const handleCartRemoval = async () => {
+    try {
+      setSubmitted(true);
+      // Call removeAllItemsfromCart and update cartCleared state
+      await removeAllItemsfromCart();
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error while clearing cart:', error);
+      // Handle error if necessary
+    }
   };
 
   return (
