@@ -2,7 +2,7 @@ import User from "../model/user.model.js";
 import bcryptjs from "bcryptjs";
 export const signup = async(req, res) => {
     try {
-        const { fullname, email, password } = req.body;
+        const { fullname, email, password, role } = req.body;
         const user = await User.findOne({ email });
         if (user) {
             return res.status(400).json({ message: "User already exists" });
@@ -12,6 +12,7 @@ export const signup = async(req, res) => {
             fullname: fullname,
             email: email,
             password: hashPassword,
+            role: role,
         });
         await createdUser.save();
         res.status(201).json({
@@ -20,6 +21,7 @@ export const signup = async(req, res) => {
                 _id: createdUser._id,
                 fullname: createdUser.fullname,
                 email: createdUser.email,
+                role: createdUser.role,
             },
         });
     } catch (error) {
@@ -29,7 +31,7 @@ export const signup = async(req, res) => {
 };
 export const login = async(req, res) => {
     try {
-        const { email, password } = req.body;
+        const { userName, email, password, role } = req.body;
         const user = await User.findOne({ email });
         const isMatch = await bcryptjs.compare(password, user.password);
         if (!user || !isMatch) {
@@ -39,8 +41,9 @@ export const login = async(req, res) => {
                 message: "Login successful",
                 user: {
                     _id: user._id,
-                    fullname: user.fullname,
+                    userName: user.userName,
                     email: user.email,
+                    role: user.role,
                 },
             });
         }

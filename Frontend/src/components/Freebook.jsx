@@ -7,7 +7,9 @@ import Slider from "react-slick";
 import axios from "axios";
 
 import Cards from "./Cards";
-function Freebook() {
+function Freebook(
+  { onAddToCart }
+) {
   const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
@@ -15,6 +17,7 @@ function Freebook() {
         const res = await axios.get("http://localhost:4001/book");
 
         const data = res.data.filter((data) => data.category === "Free");
+        //const data = res.data;
         console.log(data);
         setBook(data);
       } catch (error) {
